@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Remitly</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+	<nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
+	  <div class='container'>
+	    <div class='navbar-header'>
+	      <a class='navbar-brand' href='/'>Remitly</a>
+	    </div>
+		
+	  </div>
+	</nav>
+
+	<div class='container'>
+	  <%= yield %>
+	</div>
+	<h4>Transaction Completed!</h4>
+	<p>Would you like to send a personal e-card to Juan</p>
+	<%= button_to "Yes!", action: "new" %>
+	<%= button_to "No Thanks", action>
+
+
+
+	<footer>
+	  <div class='container'>
+	    Remitly 2018
+	  </div>
+	</footer>
+
+  </body>
+</html>

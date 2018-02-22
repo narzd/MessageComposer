@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Public transaction:</strong>
+  <%= @transaction_message.public_transaction_id %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @transaction_message.theme_id %>
+</p>
+
+<p>
+  <strong>Messenger:</strong>
+  <%= @transaction_message.messenger_id %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @transaction_message.message %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @transaction_message.recipient %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_message_path(@transaction_message) %> |
+<%= link_to 'Back', transaction_messages_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  public_transaction_id: 1
+  theme_id: 1
+  messenger_id: 1
+  message: MyText
+  recipient: MyString
+
+two:
+  public_transaction_id: 1
+  theme_id: 1
+  messenger_id: 1
+  message: MyText
+  recipient: MyString
