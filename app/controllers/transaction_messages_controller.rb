@@ -27,6 +27,11 @@ class TransactionMessagesController < ApplicationController
   def edit
   end
 
+  # GET /transaction_messages/set_messenger/messenger=1
+  def set_messenger(messenger_id)
+    session[:messenger_id] = messenger_id
+  end
+
   # POST /transaction_messages
   # POST /transaction_messages.json
   def create

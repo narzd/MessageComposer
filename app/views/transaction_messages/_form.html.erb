@@ -1,43 +1,73 @@
 <%= form_with(model: transaction_message, local: true) do |form| %>
   <% if transaction_message.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(transaction_message.errors.count, "error") %> prohibited this transaction_message from being saved:</h2>
+      <h2><%= pluralize(transaction_message.errors.count, "error") %> prohibited this transaction_message from being
+        saved:</h2>
 
       <ul>
-      <% transaction_message.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% transaction_message.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :theme_id %>
-    <%= form.number_field :theme_id, id: :transaction_message_theme_id%>
-    <% @themes.each do |theme| %>
-      <%= image_tag theme.theme_img_url %>
-    <% end %>
+  <div id="content">
+    <div id="wrapper">
+      <div id="steps">
+        <form id="formElem" name="formElem" action="" method="">
+          <fieldset class="step">
+            <legend>Mascot</legend>
+              <% @messengers.each do |messenger| %>
+                <%= link_to image_tag(messenger.messenger_img_url, size: "50") %>
+              <% end %>
+          </fieldset>
+          <fieldset class="step">
+            <legend>Theme</legend>
+            <p>
+              <% @themes.each do |theme| %>
+                <%= link_to image_tag(theme.theme_img_url, size: "50") %>
+              <% end %>
+            </p>
+          </fieldset>
+          <fieldset class="step">
+            <legend>Confirm</legend>
+            <p>
+              Everything in the form was correctly filled
+              if all the steps have a green checkmark icon.
+              A red checkmark icon indicates that some field
+              is missing or filled out with invalid data. In this
+              last step the user can confirm the submission of
+              the form.
+            </p>
+            <p class="submit">
+              <button id="registerButton" type="submit">Register</button>
+            </p>
+            <div class="actions">
+              <%= form.submit %>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div id="navigation" style="display:none;">
+        <ul>
+          <li class="selected">
+            <a href="#">Mascot</a>
+          </li>
+          <li>
+            <a href="#">Theme</a>
+          </li>
+          <li>
+            <a href="#">Message</a>
+          </li>
+          <li>
+            <a href="#">Confirm</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= form.label :messenger_id %>
-    <%= form.number_field :messenger_id, id: :transaction_message_messenger_id %>
-    <% @messengers.each do |messenger| %>
-      <%= image_tag messenger.messenger_img_url %>
-    <% end %>
-  </div>
 
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message, id: :transaction_message_message %>
-  </div>
-
-  <div class="field">
-    <%= form.label :recipient %>
-    <%= form.text_field :recipient, id: :transaction_message_recipient %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

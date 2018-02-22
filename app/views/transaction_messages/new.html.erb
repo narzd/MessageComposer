@@ -1,5 +1,8 @@
+<%= javascript_include_tag "sliding.form" %>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" %>
 <h1>Transaction Completed!</h1>
 
 <%= render 'form', transaction_message: @transaction_message %>
+
 
 <%= link_to 'Back', transaction_messages_path %>
