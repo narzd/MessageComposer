@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+themes_list = [
+    [ "theme1.png" ],
+    [ "theme2.png" ]
+]
+
+themes_list.each do |img_url|
+  Themes.create(name:name img_url:img_url)
+end

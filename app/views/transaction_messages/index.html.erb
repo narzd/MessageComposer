@@ -1,15 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Transaction Messages</h1>
+<h1>Message Composer</h1>
 
 <table>
   <thead>
     <tr>
       <th>Public transaction</th>
-      <th>Theme</th>
-      <th>Messenger</th>
-      <th>Message</th>
-      <th>Recipient</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,10 +14,6 @@
     <% @transaction_messages.each do |transaction_message| %>
       <tr>
         <td><%= transaction_message.public_transaction_id %></td>
-        <td><%= transaction_message.theme_id %></td>
-        <td><%= transaction_message.messenger_id %></td>
-        <td><%= transaction_message.message %></td>
-        <td><%= transaction_message.recipient %></td>
         <td><%= link_to 'Show', transaction_message %></td>
         <td><%= link_to 'Edit', edit_transaction_message_path(transaction_message) %></td>
         <td><%= link_to 'Destroy', transaction_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Transaction Message', new_transaction_message_path %>
+<%= link_to 'New mock transaction', new_transaction_message_path %>
