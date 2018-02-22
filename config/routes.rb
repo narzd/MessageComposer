@@ -1,4 +1,4 @@
-Rails.aplication.routes.draw do
+Rails.application.routes.draw do
   resources :transaction_messages
   resources :themes
   resources :messengers

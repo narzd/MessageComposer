@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20180222050446) do
     t.integer "messenger_id"
     t.text "message"
     t.string "recipient"
+    t.text "html"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 themes_list = [
-    [ "theme1.png" ],
-    [ "theme2.png" ]
+    [ "Theme 1", "theme1.png" ],
+    [ "Theme 2", "theme2.png" ]
 ]
 
-themes_list.each do |img_url|
+themes_list.each do |name, img_url|
   Themes.create(name:name img_url:img_url)
 end
