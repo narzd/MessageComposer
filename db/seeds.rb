@@ -12,5 +12,5 @@ themes_list = [
 ]
 
 themes_list.each do |name, img_url|
-  Themes.create(name:name img_url:img_url)
+  Theme.create(:theme_name => name , :theme_img_url => img_url)
 end
