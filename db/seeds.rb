@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 themes_list = [
-    [ "birthday", "birthday.png", "black" ],
-    [ "graduation", "graduation.png", "black" ],
-    [ "valentines", "valentines.jpg", "red" ]
+    [ "birthday", "birthday.jpg", "#cc0000" ],
+    [ "graduation", "graduation.jpg", "#cc0000" ],
+    [ "valentines", "valentines.jpg", "#cc0000" ]
 ]
 
 themes_list.each do |name, img_url, font_style|
