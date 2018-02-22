@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20180222081736) do
   end
 
   create_table "transaction_messages", force: :cascade do |t|
-    t.integer "public_transaction_id"
+    t.string "public_transaction_id"
     t.integer "theme_id"
     t.integer "messenger_id"
     t.text "message"

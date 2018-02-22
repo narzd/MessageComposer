@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 themes_list = [
-    [ "Theme1", "theme1.png", "color:black" ],
-    [ "Theme2", "theme2.png", "color:black" ],
-    [ "Valentines", "theme_valentines.jpg", "color:red" ]
+    [ "birthday", "birthday.png", "black" ],
+    [ "graduation", "graduation.png", "black" ],
+    [ "valentines", "valentines.jpg", "red" ]
 ]
 
 themes_list.each do |name, img_url, font_style|
@@ -17,18 +17,9 @@ themes_list.each do |name, img_url, font_style|
 end
 
 messenger_list = [
-    [ "Celebrate Dog", "celebrate_dog.png", "left"],
-    [ "Celebrate Minion", "celebrate_minion.png", "left" ],
-    [ "Celebrate Pig", "celebrate_pig.png", "left" ],
-    [ "Dog", "dog.png", "left" ],
-    [ "Heart Dog", "heart_dog.png", "left" ],
-    [ "Heart Minion", "heart_minion.png", "left" ],
-    [ "Heart Pig", "heart_pig.png", "left" ],
-    [ "Minion", "minion.png", "left" ],
-    [ "Pig", "pig.png", "left" ],
-    [ "Study Dog", "study_dog.png", "left" ],
-    [ "Study Minion", "study_minion.png", "left" ],
-    [ "Study Pig", "study_pig.png", "left" ]
+    [ "dog", "dog.png", "left" ],
+    [ "minion", "minion.png", "left" ],
+    [ "pig", "pig.png", "left" ],
 ]
 
 messenger_list.each do |name, img_url, position|

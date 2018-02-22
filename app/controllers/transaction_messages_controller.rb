@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class TransactionMessagesController < ApplicationController
   before_action :set_transaction_message, only: [:show, :edit, :update, :destroy]
 
@@ -10,6 +12,8 @@ class TransactionMessagesController < ApplicationController
   # GET /transaction_messages/1
   # GET /transaction_messages/1.json
   def show
+    @theme = Theme.find(@transaction_message.theme_id)
+    @messenger = Messenger.find(@transaction_message.messenger_id)
   end
 
   # GET /transaction_messages/new
@@ -26,6 +30,7 @@ class TransactionMessagesController < ApplicationController
   # POST /transaction_messages
   # POST /transaction_messages.json
   def create
+    transaction_message_params[:public_transaction_id] = 'R' + SecureRandom.hex
     @transaction_message = TransactionMessage.new(transaction_message_params)
 
     respond_to do |format|
