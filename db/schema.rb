@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180222043238) do
+ActiveRecord::Schema.define(version: 20180222050446) do
 
   create_table "messengers", force: :cascade do |t|
     t.string "messenger_img_url"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20180222043238) do
     t.integer "messenger_id"
     t.text "message"
     t.string "recipient"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
