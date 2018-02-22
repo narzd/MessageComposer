@@ -15,6 +15,8 @@ class TransactionMessagesController < ApplicationController
   # GET /transaction_messages/new
   def new
     @transaction_message = TransactionMessage.new
+    @themes = Theme.all
+    @messengers = Messenger.all
   end
 
   # GET /transaction_messages/1/edit

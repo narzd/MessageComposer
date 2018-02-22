@@ -5,7 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Messenger img url</th>
+      <th>Messenger name</th>
+      <th>img url</th>
+      <th>img </th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,7 +15,9 @@
   <tbody>
     <% @messengers.each do |messenger| %>
       <tr>
+        <td><%= messenger.messenger_name%></td>
         <td><%= messenger.messenger_img_url %></td>
+        <td><%= image_tag  messenger.messenger_img_url %></td>
         <td><%= link_to 'Show', messenger %></td>
         <td><%= link_to 'Edit', edit_messenger_path(messenger) %></td>
         <td><%= link_to 'Destroy', messenger, method: :delete, data: { confirm: 'Are you sure?' } %></td>
